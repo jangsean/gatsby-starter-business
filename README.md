@@ -94,3 +94,5 @@ Clicking the button will ask for authentication via Github, which will create a 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/v4iv/gatsby-starter-business&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 You can read up on how to set up Identity(Authentication for CMS User) here [How To Set Up Netlify CMS](https://www.netlifycms.org/docs/add-to-your-site/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dbc776e1-3b13-4c4f-ba85-a8ee214aafa1/deploy-status)](https://app.netlify.com/sites/seanjang/deploys)

@@ -1,18 +1,19 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: deploy # Branch to update
 
 publish_mode: editorial_workflow
-media_folder: static/img
-public_folder: /img
+media_folder: static/img # Media files uploads will save to static/img 
+public_folder: /img  # The src attribute for uploaded media
+
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "pages"  # Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # What the admin UI calls the post type.
     files:
       - file: "src/pages/index.md"
         label: "Home Page"
-        name: "home"
+        name: "home" # Post type identifier, used in routes. Must be unique.
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Title, name: title, widget: string}
@@ -52,9 +53,9 @@ collections:
           - {label: "Meta Description", name: "meta_description", widget: "text"}
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{slug}}"
+    folder: "src/pages/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article-page"}
       - {label: "Title", name: "title", widget: "string"}
